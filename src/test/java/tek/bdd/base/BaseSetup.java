@@ -5,11 +5,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class BaseSetup{
+public class BaseSetup {
 
-    private static ChromeDriver driver;
+    private static WebDriver driver;
 
-    public void setupBrowser(){
+    public void setupBrowser() {
 
         driver = new ChromeDriver();
         driver.get("https://retail.tekschool-students.com/");
@@ -17,12 +17,15 @@ public class BaseSetup{
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
     }
-    public void quitBrowser(){
 
-        if (driver != null){
+    public void quitBrowser() {
+
+        if (driver != null) {
             driver.quit();
         }
     }
 
-
+    public WebDriver getDriver() {
+        return driver;
+    }
 }
