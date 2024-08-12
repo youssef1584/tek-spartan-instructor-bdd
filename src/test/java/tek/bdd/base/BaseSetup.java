@@ -15,6 +15,7 @@ public class BaseSetup {
         driver.get("https://retail.tekschool-students.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        //driver.getTitle();
 
     }
 

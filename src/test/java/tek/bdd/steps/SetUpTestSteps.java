@@ -8,25 +8,30 @@ import tek.bdd.utility.SeleniumUtility;
 
 public class SetUpTestSteps extends SeleniumUtility {
 
-    @Given("open browser and navigate to retail app")
-    public void openBrowserAndNavigate(){
-        setupBrowser();
 
 
-    }
+
+
+
     @Then("validate top left corner is TEKSCHOOL")
-    public void validateTopLeftLogo(){
+    public void validateTopLeftLogo() {
         String topLeftCornerText = getElementText(By.className("top-nav__logo"));
 
-        Assert.assertEquals("TEKSCHOOL" , topLeftCornerText);
+        Assert.assertEquals("TEKSCHOOL", topLeftCornerText);
 
-        //System.out.println(text);
+
     }
 
-    @Then("close the browser")
-        public void closeBrowser(){
-            quitBrowser();
-        }
+
+    @Then("validate Sign in button is Enabled")
+    public void validate_sign_in_button_is_enabled() {
+       boolean isSignInButtonEnabled = isElementEnabled(By.xpath("//*[@id=\"signinLink\"]"));
+       Assert.assertTrue(isSignInButtonEnabled);
+
+
+
+    }
+
 
 
 

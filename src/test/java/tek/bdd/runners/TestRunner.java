@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions (
 
-        features = "classpath:features/SetupTest.feature",// Directory for feature file
+        features = "C:\\Users\\youss\\IdeaProjects\\tek-spartan-instructor-bdd\\src\\test\\resources\\features\\SetupTest.feature",// Directory for feature file
         glue = "tek.bdd.steps" // package for all the steps
 )
 

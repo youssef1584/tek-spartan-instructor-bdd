@@ -45,5 +45,10 @@ import static java.sql.DriverManager.getDriver;
 
 
        }
+       public boolean isElementEnabled(By locator){
+           return waitForVisibility(locator)
+                   .isEnabled();
+       }
+
 
 }

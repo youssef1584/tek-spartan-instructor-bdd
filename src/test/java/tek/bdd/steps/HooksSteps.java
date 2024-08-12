@@ -8,10 +8,10 @@ public class HooksSteps extends SeleniumUtility {
 
     @Before
     public void beforeEachScenario(){
-
+    setupBrowser();
     }
     @After
-    public void afterEachScnario(){
-
+    public void afterEachScenario(){
+    quitBrowser();
     }
 }
