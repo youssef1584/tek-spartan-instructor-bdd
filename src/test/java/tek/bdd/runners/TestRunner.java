@@ -9,7 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions (
 
         features = "C:\\Users\\youss\\IdeaProjects\\tek-spartan-instructor-bdd\\src\\test\\resources\\features\\SecurityTest.feature",// Directory for feature file
-        glue = "tek.bdd.steps" // package for all the steps
+        glue = "tek.bdd.steps", // package for all the steps
+
+        dryRun = false
 )
 
 
